@@ -1,157 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css"
+    />
+
     <title>Processo Seletivo - Helpper</title>
+  </head>
+  <header></header>
 
-</head>
-    <header>
-        Oii, eu sou um header
-    </header>
+  <main class="display-flex">
+    <div id="form">
+      <h2>Formulário de cadastro</h2>
 
-    <main class="display">
-        <div id="form">
-            <h2>Formulário de cadastro</h2>
-  
-            <form action="" onsubmit="Form.submit(event)">
-              <div class="input-data">
-                <label class="sr-only" for="nome">Nome</label>
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="Nome"
-                  required 
-                />
-              </div>
+      <form action="" onsubmit="capturar(event)">
+        <div class="input-data">
+          <label class="sr-only" for="nome">Nome</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Nome*"
+            required
+          />
+        </div>
 
-              <div class="input-data">
-                <label class="sr-only" for="email">E-mail</label>
-                <input
-                  type="text"
-                  id="email"
-                  name="email"
-                  placeholder="E-mail"
-                  required 
-                />
-              </div>
+        <div class="input-data">
+          <label class="sr-only" for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-mail*"
+            required
+          />
+        </div>
 
-              <div class="input-data">
-                <label class="sr-only" for="cpf">CPF/CNPJ</label>
-                <input
-                  type="text"
-                  id="cpf"
-                  name="cpf"
-                  placeholder="CPF/CNJP"
-                  required 
-                />
-              </div>
-  
-              <div class="input-data">
-                <label class="sr-only" for="cep">CEP</label>
-                <input
-                  type="text"
-                  id="cep"
-                  name="cep"
-                  placeholder="CEP"
-                  required
-                />
-            </div>
-  
-              <div class="input-data">
-                <label class="sr-only" for="Logradouro">Logradouro</label>
-                <input
-                  type="text"
-                  id="logradouro"
-                  name="logradouro"
-                  placeholder="Logradouro"
-                  required
-                />
-              </div>
+        <div class="input-data">
+          <label class="sr-only" for="registro">CPF/CNPJ</label>
+          <input
+            type="text"
+            id="registro"
+            name="registro"
+            placeholder="CPF/CNJP (somente números)*"
+            required
+          />
+        </div>
 
-              <div class="input-data">
-                <label class="sr-only" for="number">Número</label>
-                <input
-                  type="number"
-                  id="numero"
-                  name="numero"
-                  placeholder="Número"
-                  required
-                />
-              </div>
-
-              <div class="input-data">
-                <label class="sr-only" for="bairro">Bairro</label>
-                <input
-                  type="text"
-                  id="bairro"
-                  name="bairro"
-                  placeholder="Bairro"
-                  required
-                />
-              </div>
-
-              <div class="input-data">
-                <label class="sr-only" for="number">Cidade</label>
-                <input
-                  type="text"
-                  id="cidade"
-                  name="cidade"
-                  placeholder="Cidade"
-                  required
-                />
-              </div>
-
-              <div class="input-data">
-                <select id="estado" name="estado">
-                    <option value="SP" selected>São Paulo</option>
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                </select>
-              </div>
-  
-              <div class="input-data actions">
-                <button class="btn-cancelar">Cancelar</button>
-                <button class="btn-salvar">Salvar</button>
-              </div>
-            </form>
+        <div class="display-grid-postal">
+          <div class="input-data">
+            <label class="sr-only" for="cep">CEP</label>
+            <input
+              type="text"
+              id="cep"
+              name="cep"
+              placeholder="CEP*"
+              required
+            />
           </div>
-    </main>
 
-    <footer>
-        <p>2021© Copyright. Todos os Direitos Reservados.</p>
-        <p>Desenvolvido com por Juliana Pedroso</p>
-    </footer>
-<body>
-    
+          <div class="input-data">
+            <label class="sr-only" for="Logradouro">Logradouro</label>
+            <input
+              type="text"
+              id="logradouro"
+              name="logradouro"
+              placeholder="Logradouro*"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="display-grid-endereco">
+          <div class="input-data">
+            <label class="sr-only" for="number">Número</label>
+            <input
+              type="number"
+              id="numero"
+              name="numero"
+              placeholder="Número*"
+              required
+            />
+          </div>
+
+          <div class="input-data">
+            <label class="sr-only" for="bairro">Bairro</label>
+            <input
+              type="text"
+              id="bairro"
+              name="bairro"
+              placeholder="Bairro*"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="display-grid-local">
+          <div class="input-data">
+            <label class="sr-only" for="number">Cidade</label>
+            <input
+              type="text"
+              id="cidade"
+              name="cidade"
+              placeholder="Cidade*"
+              required
+            />
+          </div>
+
+          <div class="input-data">
+            <select id="estado" name="estado">
+              <option value="1" selected>Selecione o estado</option>
+              <option value="SP">São Paulo</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-data actions">
+          <button class="btn-cancelar">Cancelar</button>
+          <button class="btn-salvar">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <section id="lista">
+    <h2 class="sr-only">Lista de cadastros</h2>
+
+    <table id="tabela">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <p id="valorNome">oiiii</p>
+          <th>Email</th>
+          <th>CPF/CNPJ</th>
+          <th>CEP</th>
+          <th>Logradouro</th>
+          <th>Número</th>
+          <th>Bairro</th>
+          <th>Cidade</th>
+          <th>Estado</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>2021© Copyright. Todos os Direitos Reservados.</p>
+    <p>Desenvolvido com por Juliana Pedroso</p>
+  </footer>
+  <body>
     <script src="./scripts.js"></script>
-</body>
+  </body>
 </html>
