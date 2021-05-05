@@ -4,11 +4,152 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="./style.css" />
     <title>Processo Seletivo - Helpper</title>
 
 </head>
+    <header>
+        Oii, eu sou um header
+    </header>
+
+    <main class="display">
+        <div id="form">
+            <h2>Formulário de cadastro</h2>
+  
+            <form action="" onsubmit="Form.submit(event)">
+              <div class="input-data">
+                <label class="sr-only" for="nome">Nome</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Nome"
+                  required 
+                />
+              </div>
+
+              <div class="input-data">
+                <label class="sr-only" for="email">E-mail</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="E-mail"
+                  required 
+                />
+              </div>
+
+              <div class="input-data">
+                <label class="sr-only" for="cpf">CPF/CNPJ</label>
+                <input
+                  type="text"
+                  id="cpf"
+                  name="cpf"
+                  placeholder="CPF/CNJP"
+                  required 
+                />
+              </div>
+  
+              <div class="input-data">
+                <label class="sr-only" for="cep">CEP</label>
+                <input
+                  type="text"
+                  id="cep"
+                  name="cep"
+                  placeholder="CEP"
+                  required
+                />
+            </div>
+  
+              <div class="input-data">
+                <label class="sr-only" for="Logradouro">Logradouro</label>
+                <input
+                  type="text"
+                  id="logradouro"
+                  name="logradouro"
+                  placeholder="Logradouro"
+                  required
+                />
+              </div>
+
+              <div class="input-data">
+                <label class="sr-only" for="number">Número</label>
+                <input
+                  type="number"
+                  id="numero"
+                  name="numero"
+                  placeholder="Número"
+                  required
+                />
+              </div>
+
+              <div class="input-data">
+                <label class="sr-only" for="bairro">Bairro</label>
+                <input
+                  type="text"
+                  id="bairro"
+                  name="bairro"
+                  placeholder="Bairro"
+                  required
+                />
+              </div>
+
+              <div class="input-data">
+                <label class="sr-only" for="number">Cidade</label>
+                <input
+                  type="text"
+                  id="cidade"
+                  name="cidade"
+                  placeholder="Cidade"
+                  required
+                />
+              </div>
+
+              <div class="input-data">
+                <select id="estado" name="estado">
+                    <option value="SP" selected>São Paulo</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+              </div>
+  
+              <div class="input-data actions">
+                <button class="btn-cancelar">Cancelar</button>
+                <button class="btn-salvar">Salvar</button>
+              </div>
+            </form>
+          </div>
+    </main>
+
+    <footer>
+        <p>2021© Copyright. Todos os Direitos Reservados.</p>
+        <p>Desenvolvido com por Juliana Pedroso</p>
+    </footer>
 <body>
     
     <script src="./scripts.js"></script>
