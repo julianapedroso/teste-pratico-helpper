@@ -165,16 +165,17 @@ const Register = {
 };
 
 const DOM = {
-  registersContainer: document.querySelector("#tabela tbody"),
+  registersContainer: document.querySelector("#table tbody"),
 
   addRegister(register, index) {
     const tr = document.createElement("tr");
-    tr.innerHTML = DOM.innerHTMLRegister(register);
+    tr.innerHTML = DOM.innerHTMLRegister(register, index);
+    tr.dataset.index = index
 
     DOM.registersContainer.appendChild(tr);
   },
 
-  innerHTMLRegister(register) {
+  innerHTMLRegister(register, index) {
     const html = `
             <td class="nome">${register.nome}</td>
             <td class="email">${register.email}</td>
@@ -186,7 +187,7 @@ const DOM = {
             <td class="cidade">${register.cidade}</td>
             <td class="estado">${register.estado}</td>
             <td>
-                <img onclick="Registers.remove" src="./assets/remove.svg" alt="Imagem de remover" />
+                <img onclick="Register.remove(${index})" src="./assets/remove.svg" alt="Imagem de remover" />
             </td>
       `;
     return html;
@@ -203,7 +204,7 @@ const Form = {
   registro: document.querySelector("input#registro"),
   cep: document.querySelector("input#cep"),
   logradouro: document.querySelector("input#logradouro"),
-  numero: document.querySelect("input#numero"),
+  numero: document.querySelector("input#numero"),
   bairro: document.querySelector("input#bairro"),
   cidade: document.querySelector("input#cidade"),
   estado: document.querySelector("input#estado"),
@@ -250,20 +251,20 @@ const Form = {
     }
   },
 
-  saveRegister(register) {
-    Register.add(register)
+  clearFields() {
+    Form.nome.value = ""
+    Form.email.value = ""
+    Form.registro.value = ""
+    Form.cep.value = ""
+    Form.logradouro.value = ""
+    Form.numero.value = ""
+    Form.bairro.value = ""
+    Form.cidade.value = ""
+    Form.estado.value = ""
   },
 
-  clearFields() {
-    Form.nome.value = "",
-    Form.email.value = "",
-    Form.registro.value = "",
-    Form.cep.value = "",
-    Form.logradouro.value = "",
-    Form.numero.value = "",
-    Form.bairro.value = "",
-    Form.cidade.value = "",
-    Form.estado.value = ""
+  saveRegister(register) {
+    Register.add(register)
   },
 
   submit(event) {
@@ -271,21 +272,23 @@ const Form = {
 
     try {
       Form.validateFields();
-      Form.saveRegister(register);
+      const register = Form.getValues()
+      
+      Form.saveRegister(register)
       Form.clearFields()
       
     } catch (error) {
       alert(error.message)
+      console.log(error)
     }
 
-   
   },
 };
 
 const App = {
   init() {
-    Register.all.forEach((register) => {
-      DOM.addRegister(register);
+    Register.all.forEach((register, index) => {
+      DOM.addRegister(register, index);
     });
   },
 
@@ -296,25 +299,3 @@ const App = {
 };
 
 App.init();
-
-// let capturandoNome = ""
-
-// function capturar(event) {
-//     event.preventDefault()
-//     capturandoNome = document.getElementById("nome").value;
-//     document.getElementById("valorNome").innerHTML = capturandoNome
-// }
-
-// const Register = {
-//         all: Storage.get(),
-
-//         add(register) {
-//           Register.all.push(register);
-
-//         },
-
-//         remove(index) {
-//           Register.all.splice(index, 1)
-
-//         }
-//       };

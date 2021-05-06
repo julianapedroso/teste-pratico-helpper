@@ -65,7 +65,7 @@
           </div>
 
           <div class="input-data">
-            <label class="sr-only" for="Logradouro">Logradouro</label>
+            <label class="sr-only" for="logradouro">Logradouro</label>
             <input
               type="text"
               id="logradouro"
@@ -78,7 +78,7 @@
 
         <div class="display-grid-endereco">
           <div class="input-data">
-            <label class="sr-only" for="number">Número</label>
+            <label class="sr-only" for="numero">Número</label>
             <input
               type="number"
               id="numero"
@@ -102,7 +102,7 @@
 
         <div class="display-grid-local">
           <div class="input-data">
-            <label class="sr-only" for="number">Cidade</label>
+            <label class="sr-only" for="cidade">Cidade</label>
             <input
               type="text"
               id="cidade"
@@ -112,7 +112,18 @@
             />
           </div>
 
-          <div class="input-data">
+            <div class="input-data">
+              <label class="sr-only" for="estado">Estado</label>
+              <input
+                type="text"
+                id="estado"
+                name="estado"
+                placeholder="Estado*"
+                required
+              />
+            </div>
+
+          <!-- <div class="input-data">
             <select id="estado" name="estado">
               <option value="1" selected>Selecione o estado</option>
               <option value="SP">São Paulo</option>
@@ -143,25 +154,23 @@
               <option value="SE">Sergipe</option>
               <option value="TO">Tocantins</option>
             </select>
-          </div>
+          </div> -->
         </div>
 
-        <div class="input-data actions">
-          <button class="btn-cancelar">Cancelar</button>
+        <div class="input-data action">
           <button class="btn-salvar">Salvar</button>
         </div>
       </form>
     </div>
   </main>
 
-  <section id="lista">
+  <section id="list">
     <h2 class="sr-only">Lista de cadastros</h2>
 
-    <table id="tabela">
+    <table id="table">
       <thead>
         <tr>
           <th>Nome</th>
-          <p id="valorNome">oiiii</p>
           <th>Email</th>
           <th>CPF/CNPJ</th>
           <th>CEP</th>
