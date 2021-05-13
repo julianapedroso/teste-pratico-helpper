@@ -44,7 +44,7 @@ $ git clone https://github.com/julianapedroso/teste-pratico-helpper.git
 $ cd teste-pratico-helpper
 ```
 
-##### Passo 3. bra o projeto em sua IDE preferida.:
+##### Passo 3. Abra o projeto em sua IDE preferida.:
 
 ### 📷 Prints:
 
