@@ -1,7 +1,7 @@
 # 📌 Desafio Helpper - Programa de Estágio 
 
 <h2 align='center'>
-<img src="https://helpper.com.br/img/logos/helpper-logo.png" width="50%" margin="2rem" alt="Logo Helpper"/>
+<img src="https://nerdin.com.br/img/empresa/1745.png" width="20%" margin="2rem" alt="Logo Helpper"/>
 </h2>
 
 
